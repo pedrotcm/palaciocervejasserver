@@ -1,0 +1,4 @@
+DELETE FROM USUARIO WHERE USUARIO = 'adminpalacio';
+
+INSERT INTO USUARIO (PK_ID_USUARIO, USUARIO, SENHA)
+VALUES (1, 'adminpalacio', 'adminpalacio');
