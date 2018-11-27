@@ -4,8 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 @Entity
 @Table( name = "CLIENTE" )
+@OnDelete( action = OnDeleteAction.CASCADE )
 public class Client  extends User{
 
 	private static final long serialVersionUID = -7497408012130316981L;
@@ -18,9 +22,6 @@ public class Client  extends User{
 
 	@Column( name = "TELEFONE" )
 	private String phone;
-
-	@Column( name = "EMAIL" )
-	private String email;
 
 	@Column( name = "ENDERECO" )
 	private String address;
@@ -53,14 +54,6 @@ public class Client  extends User{
 
 	public void setPhone( String phone ) {
 		this.phone = phone;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail( String email ) {
-		this.email = email;
 	}
 
 	public String getAddress() {

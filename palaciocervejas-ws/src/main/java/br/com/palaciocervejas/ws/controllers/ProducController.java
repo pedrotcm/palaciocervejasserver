@@ -18,7 +18,7 @@ public class ProducController {
 	private ProductService productService;
 
 	@PostMapping
-	public ResponseEntity<?> addClient( @RequestBody Product product ) {
+	public ResponseEntity<?> saveClient( @RequestBody Product product ) {
 
 		Product entity = productService.save( product );
 		// Client entity = clientService.save( client.toEntity() );
