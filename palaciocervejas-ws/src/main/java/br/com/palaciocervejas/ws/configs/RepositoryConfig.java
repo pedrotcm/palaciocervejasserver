@@ -7,12 +7,13 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapt
 import br.com.palaciocervejas.domain.entities.Category;
 import br.com.palaciocervejas.domain.entities.Client;
 import br.com.palaciocervejas.domain.entities.Product;
+import br.com.palaciocervejas.domain.entities.User;
 
 @Configuration
 public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
 	@Override
 	public void configureRepositoryRestConfiguration( RepositoryRestConfiguration config ) {
 		super.configureRepositoryRestConfiguration( config );
-		config.exposeIdsFor( Client.class, Category.class, Product.class );
+		config.exposeIdsFor( User.class, Client.class, Category.class, Product.class );
 	}
 }

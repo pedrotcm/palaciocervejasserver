@@ -3,6 +3,7 @@ package br.com.palaciocervejas.domain.entities;
 import java.io.Serializable;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,7 +29,7 @@ public class Category implements Serializable{
 	@Column( name = "NOME" )
 	private String name;
 
-	@OneToMany( mappedBy = "category" )
+	@OneToMany( mappedBy = "category", cascade = CascadeType.REMOVE )
 	private Set<Product> products;
 
 	public Long getId() {
