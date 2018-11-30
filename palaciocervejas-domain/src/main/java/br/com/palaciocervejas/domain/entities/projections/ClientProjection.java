@@ -13,6 +13,8 @@ public interface ClientProjection {
 
 	String getPassword();
 
+	String getCpf();
+
 	String getName();
 
 	String getPhone();
@@ -22,5 +24,5 @@ public interface ClientProjection {
 	String getCity();
 
 	String getState();
-	
+
 }

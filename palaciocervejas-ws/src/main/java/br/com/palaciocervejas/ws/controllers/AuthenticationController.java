@@ -26,7 +26,7 @@ public class AuthenticationController {
 			return ResponseEntity.badRequest().body( "Usuário ou senha inválidos" );
 		}
 
-		return ResponseEntity.ok( user );
+		return ResponseEntity.ok().body( user );
 
 	}
 }
