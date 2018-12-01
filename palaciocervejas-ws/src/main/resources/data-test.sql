@@ -3,7 +3,7 @@ delete from CLIENTE WHERE PK_ID_USUARIO = 1;
 
 
 INSERT INTO USUARIO (PK_ID_USUARIO, EMAIL, SENHA)
-VALUES (1, 'admin@palacio', 'admin@palacio');
+VALUES (1, 'admin@palacio.com', 'admin123');
 
 INSERT INTO CLIENTE(PK_ID_USUARIO)
 VALUES (1);
